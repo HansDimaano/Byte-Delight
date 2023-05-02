@@ -1,0 +1,857 @@
+/* SCSS for the main page */
+
+/* import functions.scss */
+@import 'functions.scss';
+
+/* BODY */
+body {
+    background-color: #320D07;
+}
+
+/* CONTENT DIV */
+#content {
+    width: 100%;
+}
+
+
+/*----- HOME PAGE DIV -----*/
+#home {
+    background: url("../assets/home_bg.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 88vh;
+    text-align: center;
+    flex-direction: column;
+    @include center_items();
+
+    /* SET DISPLAY TO NONE INITIALLY (will be changed in toggle_pages.js) */
+    display: none;
+
+    /* BYTE DELIGHT TITLE */
+    h1 {
+        font-size: 150px;
+        font-weight: bold;
+        letter-spacing: 6px;
+        text-shadow: 3px 3px black;
+        width: 90%;
+        margin-top: 50px;
+        animation: revealUpOnce 1.5s ease;
+
+        /* DELIGHT TITLE */
+        b {
+            color: #D6AE92;
+        }
+
+        /* MEDIA QUERIES FOR BYTE DELIGHT TITLE */
+        @include media_query(901px, 1100px){
+            font-size: 120px;
+        }
+
+        @include media_query(601px, 900px){
+            font-size: 100px;
+        }
+
+        @include media_query(401px, 600px){
+            font-size: 80px;
+        }
+
+        @include media_query(0px, 400px){
+            font-size: 60px;
+        }
+    }
+
+    /* BYTE DELIGHT DESCRIPTION */
+    p {
+        width: 70%;
+        font-size: 20px;
+        letter-spacing: 5px;
+        text-shadow: 3px 3px black;
+        padding: 30px 0;
+        animation: revealUpOnce 1.5s ease;
+
+        /* MEDIA QUERIES FOR BYTE DELIGHT DESCRIPTION */
+        @include media_query(901px, 1100px){
+            font-size: 17px;
+        }
+
+        @include media_query(601px, 900px){
+            width: 75%;
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        @include media_query(401px, 600px){
+            width: 80%;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        @include media_query(0px, 400px){
+            width: 90%;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    /* START THE DELIGHT BUTTON */
+    a {
+        cursor: pointer;
+        padding: 8px 20px;
+        border: 5px solid white;
+        border-radius: 30px;
+        box-shadow: 3px 3px black;
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        margin-bottom: 23vh;
+        background-color: rgba(214, 174, 146, 0.3);
+        transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
+        animation: revealUpOnce 1.5s ease;
+
+        /* MEDIA QUERIES FOR START THE DELIGHT BUTTON */
+        @include media_query(901px, 1100px){
+            font-size: 19px;
+        }
+
+        @include media_query(601px, 900px){
+            font-size: 16px;
+        }
+
+        @include media_query(401px, 600px){
+            font-size: 14px;
+        }
+
+        @include media_query(0px, 400px){
+            font-size: 12px;
+        }
+
+        /* START THE DELIGHT BUTTON HOVER AND FOCUS */
+        &:hover,
+        &:focus {
+            background-color: #320D07;
+            border-color: #D6AE92;
+            color: #D6AE92;            
+        }
+    }
+}
+
+
+
+/*----- MENU PAGE DIV -----*/
+#menu {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    @include center_items();
+
+    /* SET DISPLAY TO NONE INITIALLY (will be changed in toggle_pages.js) */
+    display: none;
+
+    /* TITLE DIV */
+    .title {
+        background: url("../assets/menu_bg.png") no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        flex-direction: column;
+        @include center_items();
+
+        /* OUR MENU TITLE */
+        h1 {
+            font-size: 200px;
+            font-weight: 100;
+            letter-spacing: 10px;
+            line-height: 200px;
+            margin: 20px 0;
+            animation: revealRightOnce 1.5s ease;
+
+            /* MEDIA QUERIES FOR OUR MENU TITLE */
+            @include media_query(751px, 950px){
+                font-size: 150px;
+                line-height: 150px;
+            }
+
+            @include media_query(551px, 750px){
+                font-size: 150px;
+                line-height: 150px;
+            }
+
+            @include media_query(0px, 550px){
+                font-size: 100px;
+                line-height: 100px;
+            }
+
+            /* MENU TITLE */
+            b {
+                font-weight: 100;
+                color: #D6AE92;
+            }
+        }
+
+        /* MENU DESCRIPTION */
+        p {
+            font-family: 'Cedarville Cursive', cursive;
+            font-size: 20px;
+            width: 80%;
+            margin-bottom: 40px;
+            animation: revealRightOnce 1.5s ease;
+
+            /* MEDIA QUERIES FOR MENU DESCRIPTION */
+            @include media_query(751px, 950px){
+                font-size: 18px;
+            }
+
+            @include media_query(551px, 750px){
+                font-size: 16px;
+            }
+
+            @include media_query(0px, 550px){
+                font-size: 14px;
+            }
+        }
+
+        /* WELCOME DIV */
+        .welcome {
+            margin-top: 40px;
+            margin-bottom: 0;
+            letter-spacing: 20px;
+            font-size: 25px;
+            font-family: 'PT Serif Caption', serif;
+
+            /* MEDIA QUERIES FOR WELCOME DIV */
+            @include media_query(751px, 950px){
+                font-size: 20px;
+            }
+
+            @include media_query(551px, 750px){
+                font-size: 18px;
+            }
+
+            @include media_query(0px, 550px){
+                font-size: 16px;
+            }
+        }
+    }
+
+    /* MENU LIST DIV */
+    .menu_list {
+        background: url("../assets/menu.png") no-repeat right center;
+        background-size: cover;
+        width: 100%;
+        border-top: 6px solid white;
+        border-bottom: 6px solid white;
+        padding-bottom: 30px;
+        flex-wrap: wrap;
+        @include center_items();
+
+        /* MENU FORM BUTTONS */
+        form {
+            width: 30%;
+            margin: 10px 2px 10px 32px;
+
+            /* MEDIA QUERIES FOR MENU FORM BUTTONS */
+            @include media_query(751px, 950px){
+                width: 40%;
+            }
+
+            @include media_query(0, 750px){
+                width: 70%;
+            }
+        }
+
+        /* IMAGE INPUT TYPE */
+        input[type="image"] {
+            width: 100%;
+            transition: 0.2s ease-in-out;
+            
+            /* IMAGE INPUT TYPE HOVER */
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-10px);
+            }
+        }
+    }
+
+    /* BOOK DIV */
+    .book {
+        background: url("../assets/booking.png") no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        padding-top: 500px;
+        border-bottom: 6px solid white;
+        @include spaceAround_items();
+
+        /* LEFT DIV */
+        .left {
+            width: 70%;
+            text-align: left;
+
+            /* MEDIA QUERY FOR LEFT DIV */
+            @include media_query(0px, 550px){
+                width: 55%;
+            }
+
+            /* PARAGRAPH */
+            p {
+                font-size: 30px;
+                letter-spacing: 20px;
+
+                /* MEDIA QUERIES FOR PARAGRAPH */
+                @include media_query(751px, 950px){
+                    font-size: 25px;
+                    letter-spacing: 15px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 20px;
+                    letter-spacing: 10px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 17px;
+                    letter-spacing: 7px;
+                }
+            }
+
+            /* HEADING */
+            h1 {
+                font-size: 150px;
+                line-height: 150px;
+                margin-bottom: 40px;
+
+                /* HEADING COLORED */
+                b {
+                    color: #D6AE92;
+                }
+
+                /* MEDIA QUERIES FOR HEADING */
+                @include media_query(751px, 950px){
+                    font-size: 125px;
+                    line-height: 125px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 100px;
+                    line-height: 100px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 75px;
+                    line-height: 75px;
+                }
+            }
+        }
+        
+        /* RIGHT DIV */
+        .right {
+            width: 23%;
+            text-align: right;
+
+            /* MEDIA QUERY FOR RIGHT DIV */
+            @include media_query(0px, 550px){
+                width: 40%;
+            }
+
+            /* PARAGRAPH */
+            p {
+                font-size: 25px;
+                margin-bottom: 40px;
+
+                /* MEDIA QUERIES FOR PARAGRAPH */
+                @include media_query(751px, 950px){
+                    font-size: 20px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 16px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 14px;
+                }
+            }
+
+            /* BOOK NOW BUTTON */
+            a {
+                padding: 10px 20px;
+                color: #281C19;
+                background-color: #AF8C6C;
+                border-radius: 30px;
+                cursor: pointer;
+
+                /* MEDIA QUERIES FOR BOOK NOW BUTTON */
+                @include media_query(751px, 950px){
+                    font-size: 14px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 12px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 10px;
+                }
+
+                /* BOOK NOW BUTTON HOVER */
+                &:hover{
+                    background-color: #320D07;
+                    box-shadow: 0 0 8px #320D07;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*----- ABOUT PAGE DIV -----*/
+#about {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    @include center_items();
+
+    /* SET DISPLAY TO NONE INITIALLY (will be changed in toggle_pages.js) */
+    display: none;
+
+    /* ABOUT US DIV */
+    .about_us {
+        width: 100%;
+        text-align: center;
+        @include center_items();
+
+        /* MEDIA QUERY FOR ABOUT US DIV */
+        @include media_query(0px, 900px){
+            flex-direction: column;
+        }
+
+        /* SIDE DESIGN DIV */
+        .side_design {
+            width: 40%;
+            min-height: 700px;
+            background: url('../assets/about_side.png') no-repeat center center;
+            background-size: cover;
+
+            /* MEDIA QUERY FOR SIDE DESIGN DIV */
+            @include media_query(0px, 900px){
+                width: 100%;
+                min-height: 400px;
+            }
+        }
+
+        /* ABOUT INFO DIV */
+        .about_info {
+            width: 60%;
+            min-height: 700px;
+            background-color:#734f39;
+            flex-direction: column;
+            text-align: left;
+            @include center_items();
+
+            /* MEDIA QUERY FOR ABOUT INFO DIV */
+            @include media_query(0px, 900px){
+                width: 100%;
+                min-height: 300px;
+                text-align: center;
+            }
+            
+            /* ABOUT INFO HEADING */
+            h1 {
+                font-weight: 100;
+                font-size: 175px;
+                margin-left: -215px;
+                animation: revealRightOnce 1.5s ease;
+
+                /* MEDIA QUERIES FOR ABOUT INFO HEADING */
+                @include media_query(951px, 1100px){
+                    font-size: 155px;
+                }
+
+                @include media_query(901px, 950px){
+                    font-size: 150px;
+                }
+        
+                @include media_query(551px, 900px){
+                    font-size: 100px;
+                    line-height: 100px;
+                    margin: 20px 0 0 0;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 70px;
+                    margin: 20px 0 0 0;
+                }
+            }
+
+            /* ABOUT INFO PARAGRAPH */
+            p {
+                font-size: 17px;
+                margin: 30px 50px 60px 50px;
+                animation: revealRightOnce 1.5s ease;
+
+                /* MEDIA QUERIES FOR ABOUT INFO PARAGRAPH */
+                @include media_query(551px, 900px){
+                    font-size: 16px;
+                    margin: 30px 50px 100px 50px;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 14px;
+                    margin: 30px 50px 100px 50px;
+                }
+            }
+        }
+    }
+
+    /* OUR STORY DIV */
+    .our_story {
+        width: 100%;
+        flex-direction: column;
+        @include center_items();
+
+        /* HEADING DIV */
+        .heading{
+            width: 100%;
+            height: 250px;
+            @include spaceAround_items();
+
+            /* MEDIA QUERIES FOR HEADING DIV */
+            @include media_query(551px, 900px){
+                height: 150px;
+            }
+    
+            @include media_query(0px, 550px){
+                font-size: 70px;
+                height: 100px;
+            }
+
+            /* HEADING 1 */
+            h1 {
+                font-size: 80px;
+
+                /* MEDIA QUERIES FO HEADING 1 */
+                @include media_query(551px, 900px){
+                    font-size: 60px;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 40px;
+                }
+            }
+    
+            /* COFFEE CUP IMAGE */
+            img {
+                width: 35%;
+                z-index: 2;
+            }
+        }
+
+        /* STORY INFO DIV */
+        .story_info {
+            background: url('../assets/story_bg.png') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            padding-top: 200px;
+            flex-direction: column;
+            @include center_items();
+
+            /* MEDIA QUEIRES FOR STORY INFO DIV */
+            @include media_query(551px, 900px){
+                padding-top: 100px;
+            }
+    
+            @include media_query(0px, 550px){
+                padding-top: 50px;
+            }
+
+            /* STORY INFO PARAGRAPH */
+            p {
+                font-size: 25px;
+                margin: 0 90px;
+
+                /* MEDIA QUERIES FOR STORY INFO PARAGRAPH */
+                @include media_query(551px, 900px){
+                    font-size: 20px;
+                    margin: 0 60px;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 15px;
+                    margin: 0 30px;
+                }
+            }
+
+            /* STORY ROW DIV */
+            .story_row{
+                margin-top: 50px;
+                width: 90%;
+                @include spaceAround_items();
+
+                /* STORY ROW IMAGES */
+                img {
+                    width: 10%;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    /* MEET OUR TEAM DIV */
+    .meet_our_team {
+        width: 100%;
+        flex-direction: column;
+        @include center_items();
+
+        /* HEADING DIV */
+        .heading {
+            width: 100%;
+            min-height: 100px;
+            @include center_items();
+
+            /* MEDIA QUERIES FOR HEADING DIV */
+            @include media_query(551px, 900px){
+                min-height: 75px;
+            }
+    
+            @include media_query(0px, 550px){
+                min-height: 50px;
+            }
+            
+            /* HEADING 1 */
+            h1 {
+                margin: auto;
+                font-weight: 100;
+                font-size: 40px;
+                letter-spacing: 40px;
+
+                /* MEDIA QUERIES FOR HEADING 1 */
+                @include media_query(551px, 900px){
+                    font-size: 20px;
+                    letter-spacing: 20px;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 15px;
+                    letter-spacing: 15px;
+                }
+            }
+        }
+
+        /* TEAM DIV */
+        .team {
+            background: url('../assets/cork.png') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            flex-wrap: wrap;
+            padding: 50px 0;
+            @include center_items();
+
+            /* TEAM IMAGES */
+            img {
+                width: 23%;
+                margin: 30px 10px;
+
+                /* MEDIA QUERIES FOR TEAM IMAGES */
+                @include media_query(551px, 900px){
+                    width: 33%;
+                }
+        
+                @include media_query(0px, 550px){
+                    width: 45%;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*----- BLOG PAGE DIV -----*/
+#blog {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    @include center_items();
+
+    /* SET DISPLAY TO NONE INITIALLY (will be changed in toggle_pages.js) */
+    display: none;
+
+    /* TITLE DIV */
+    .title {
+        background: url('../assets/cork.png') no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        z-index: 2;
+
+        /* TITLE IMAGE */
+        img {
+            width: 60%;
+            margin-top: 80px;
+            margin-bottom: -80px;
+            animation: revealUpOnce 1.5s ease;
+
+            /* MEDIA QUERY FOR TITLE IMAGE */
+            @include media_query(0px, 700px){
+                margin-top: 60px;
+                margin-bottom: -60px;
+            }
+        }
+    }
+
+    /* OUR BLOG DIV */
+    .our_blog {
+        background: url('../assets/ourblog_bg.png') no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        padding-top: 150px;
+        border-top: 6px solid white;
+        border-bottom: 6px solid white;
+        @include center_items();
+
+        /* MEDIA QUERY FOR OUR BLOG DIV */
+        @include media_query(0, 950px){
+            flex-direction: column;
+        }
+
+        /* YOUTUBE IFRAME */
+        iframe {
+            width: 40%;
+            height: 400px;
+            margin-bottom: 50px;
+            
+            /* MEDIA QUERY FOR YOUTUBE IFRAME */
+            @include media_query(0, 950px){
+                width: 80%;
+            }
+        }
+
+        /* BLOG CONTENT DIV */
+        .content {
+            width: 40%;
+            margin-left: 70px;
+            flex-direction: column;
+            @include center_items();
+
+            /* MEDIA QUERY FOR BLOG CONTENT DIV */
+            @include media_query(0, 950px){
+                width: 90%;
+                margin: 0;
+            }
+
+            /* CONTENT HEADING */
+            h1 {
+                font-size: 100px;
+                margin-bottom: 30px;
+
+                /* CONTENT HEADING COLORED */
+                b {
+                    color: #D6AE92;
+                }
+
+                /* MEDIA QUERIES FOR CONTENT HEADING */
+                @include media_query(551px, 900px){
+                    font-size: 75px;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 50px;
+                }
+            }
+
+            /* CONTENT PARAGRAPH */
+            p {
+                font-family: 'Cedarville Cursive', cursive;
+                font-size: 20px;
+                margin-bottom: 50px;
+
+                /* MEDIA QUERIES FOR CONTENT PARAGRAPG */
+                @include media_query(551px, 900px){
+                    font-size: 17px;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    /* RECIPES REVEALED DIV */
+    .recipes_revealed {
+        width: 100%;
+        flex-direction: column;
+        background: url('../assets/recipesrevealed_bg.png') no-repeat center center;
+        background-size: cover;
+        border-bottom: 6px solid white;
+        @include center_items();
+
+        /* HEADING DIV */
+        .heading {
+            @include center_items();
+
+            /* HEADING IMAGE */
+            img {
+                width: 10%;
+                margin: 0 20px;
+
+                /* MEDIA QUERIES FOR HEADING IMAGE */
+                @include media_query(551px, 900px){
+                    width: 8%;
+                }
+        
+                @include media_query(0px, 550px){
+                    width: 6%;
+                }
+            }
+
+            /* HEADING 1 */
+            h1 {
+                margin: 20px 0;
+                font-weight: 100;
+                letter-spacing: 30px;
+    
+                /* HEADING 1 COLORED */
+                b {
+                    color: #D6AE92;
+                    font-weight: 100;
+                }
+
+                /* MEDIA QUERIES FOR HEADING 1 */
+                @include media_query(551px, 900px){
+                    font-size: 24px;
+                    letter-spacing: 22px;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 19;
+                    letter-spacing: 17px;
+                }
+            }
+        }
+
+        /* RECIPES DIV */
+        .recipes {
+            width: 90%;
+            flex-wrap: wrap;
+            margin: 40px 0 60px 0;
+            @include center_items();
+
+            /* RECIPE IMAGE BUTTON */
+            img {
+                width: 40%;
+                margin: 20px 40px;
+                cursor: pointer;
+
+                /* MEDIA QUERY FOR RECIPE IMAGE BUTTON */
+                @include media_query(0px, 900px){
+                    width: 80%;
+                }
+
+                /* RECIPE IMAGE BUTTON */
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+/* SCSS for holding the imports, mixins, and keyframes */
+/* import PT Serif Caption and Cedarville Cursive fonts */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+/* mixin for creating media query screens */
+/* mixin for centering the items in HTML */
+/* mixin for space around in justifying content and aligning items to center in HTML */
+/* mixin for space around in justifying content and aligning items to center in HTML */
+/* animation for revealing elements up once */
+@keyframes revealUpOnce {
+  /* set opacity to 0 and transform to down */
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  /* set opacity to 1 and transform to 0 */
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* animation for revealing elements right once */
+@keyframes revealRightOnce {
+  /* set opacity to 0 and transform to left */
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  /* set opacity to 1 and transform to 0 */
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* animation for volume animation reveal */
+@keyframes volumeAnim {
+  /* set width to 0 */
+  from {
+    width: 0;
+  }
+  /* set width to inherit */
+  to {
+    width: inherit;
+  }
+}/*# sourceMappingURL=functions.css.map */
