@@ -133,7 +133,9 @@
 
         <!-- Byte Delight Description -->
         <p>
-            a Café that offers technologically-advanced experience, where you can satisfy your cravings and your curiosity, experiencing the best of both worlds.
+            a Café that offers technologically-advanced experience, 
+            where you can satisfy your cravings and your curiosity, 
+            experiencing the best of both worlds.
         </p>
 
         <!-- Start the Delight Button (using toggle_pages.js and toggle_footer.js) -->
@@ -154,7 +156,9 @@
 
             <!-- Menu Description -->
             <p>
-                Our menu offers a variety of options for drinks and pastries. From hearty breads and specialty hot & cold drinks, we've got you covered! We also offer a friendly company from our staffs, and futuristic atmosphere, so come and visit us!
+                Our menu offers a variety of options for drinks and pastries. 
+                From hearty breads and specialty hot & cold drinks, we've got you covered! We also offer a 
+                friendly company from our staffs, and futuristic atmosphere, so come and visit us!
             </p>
         </div>
 
@@ -226,7 +230,7 @@
                 <p>Book a reservation now to enjoy a line & hassle free visit in our cafe!</p>
                 
                 <!-- Book Now Button -->
-                <a>BOOK NOW</a>
+                <a onclick="showModal(); loadModal('modals/chatbot.html', 'modal');">BOOK NOW</a>
             </div>
         </div>
     </div>
