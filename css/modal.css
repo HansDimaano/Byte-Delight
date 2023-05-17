@@ -1,0 +1,1303 @@
+/* import PT Serif Caption and Cedarville Cursive fonts */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+/* animation for revealing elements up once */
+@keyframes revealUpOnce {
+  /* set opacity to 0 and transform to down */
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  /* set opacity to 1 and transform to 0 */
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* animation for revealing elements right once */
+@keyframes revealRightOnce {
+  /* set opacity to 0 and transform to left */
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  /* set opacity to 1 and transform to 0 */
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* animation for volume animation reveal */
+@keyframes volumeAnim {
+  /* set width to 0 */
+  from {
+    width: 0;
+  }
+  /* set width to inherit */
+  to {
+    width: inherit;
+  }
+}
+
+/* MODAL DIV */
+#modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+/* RECIPE DIV */
+#modal .recipe {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #320D07;
+  padding: 20px;
+  border: 10px solid white;
+  width: 70%;
+  height: 80%;
+  overflow: auto;
+  animation: revealUpOnce 1s ease;
+}
+
+/* HEADING DIV */
+#modal .recipe .heading {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* RECIPE IMAGE ICON */
+#modal .recipe .heading .recipe_img {
+  width: 20%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-right: 5%;
+}
+
+/* MEDIA QUERY FOR RECIPE IMAGE ICON */
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  #modal .recipe .heading .recipe_img {
+    width: 30%;
+    
+  }
+}
+
+/* RECIPE NAME DIV */
+#modal .recipe .heading .recipe_name {
+  width: 50%;
+  padding-right: 5%;
+}
+
+/* MEDIA QUERY FOR RECIPE NAME DIV */
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  #modal .recipe .heading .recipe_name {
+    width: 65%;
+    padding: 0;
+    
+  }
+}
+
+/* RECIPE HEADING */
+#modal .recipe .heading .recipe_name h1 {
+  font-family: "Cedarville Cursive", cursive;
+  color: #D6AE92;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 20px 0;
+}
+
+/* MEDIA QUERIES FOR RECIPE HEADING */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .recipe .heading .recipe_name h1 {
+    font-size: 30px;
+    line-height: 30px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .recipe .heading .recipe_name h1 {
+    font-size: 20px;
+    line-height: 20px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .recipe .heading .recipe_name h1 {
+    font-size: 15px;
+    line-height: 15px;
+    
+  }
+}
+
+/* RECIPE DESCRIPTION */
+#modal .recipe .heading .recipe_name p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* MEDIA QUERIES FOR RECIPE DESCRIPTION */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .recipe .heading .recipe_name p {
+    font-size: 14px;
+    line-height: 24px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .recipe .heading .recipe_name p {
+    font-size: 12px;
+    line-height: 22px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .recipe .heading .recipe_name p {
+    font-size: 10px;
+    line-height: 20px;
+    
+  }
+}
+
+/* RATING DIV */
+#modal .recipe .heading .rating {
+  width: 20%;
+  height: -moz-min-content;
+  height: min-content;
+  text-align: center;
+}
+
+/* MEDIA QUERY FOR RATING DIV */
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  #modal .recipe .heading .rating {
+    width: 50%;
+    margin: 20px 0 10px 0;
+    
+  }
+}
+
+/* BEGINNER FRIENDLY TEXT */
+#modal .recipe .heading .rating h4 {
+  font-size: 17px;
+  line-height: 27px;
+  letter-spacing: 2px;
+  margin: 10px 0; 
+}
+
+/* MEDIA QUERIES FOR BEGINNER FRIENDLY TEXT */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .recipe .heading .rating h4 {
+    font-size: 15px;
+    line-height: 25px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .recipe .heading .rating h4 {
+    font-size: 13px;
+    line-height: 23px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .recipe .heading .rating h4 {
+    font-size: 11px;
+    line-height: 21px;
+    
+  }
+}
+
+/* STAR DIV */
+#modal .recipe .heading .rating .star {
+  width: 100%;
+}
+
+/* MEDIA QUERY FOR STAR DIV */
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  #modal .recipe .heading .rating .star {
+    width: 50%;
+    
+  }
+}
+
+/* RECIPE CONTENT DIV */
+#modal .recipe .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* INGREDIENTS AND INSTRUCTIONS HEADING */
+#modal .recipe .content h1 {
+  font-family: "Cedarville Cursive", cursive;
+  color: #D6AE92;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 20px 0;  
+}
+
+/* MEDIA QUERIES FOR INGREDIENTS AND INSTRUCTIONS HEADING */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .recipe .content h1 {
+    font-size: 30px;
+    line-height: 30px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .recipe .content h1 {
+    font-size: 20px;
+    line-height: 20px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .recipe .content h1 {
+    font-size: 15px;
+    line-height: 15px;
+    
+  }
+}
+
+/* LISTS */
+#modal .recipe .content ul, #modal .recipe .content ol {
+  margin: 20px 0 20px 30px;
+}
+
+/* PARAGRAPH AND LIST PARAGRAPH */
+#modal .recipe .content p, #modal .recipe .content li {
+  line-height: 36px;
+}
+
+/* MEDIA QUEIRES FOR PARAGRAPH AND LIST PARAGRAPH */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .recipe .content p, #modal .recipe .content li {
+    font-size: 14px;
+    line-height: 34px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .recipe .content p, #modal .recipe .content li {
+    font-size: 12px;
+    line-height: 32px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .recipe .content p, #modal .recipe .content li {
+    font-size: 10px;
+    line-height: 30px;
+    
+  }
+}
+
+/* INGREDIENTS DIV */
+#modal .recipe .content .ingredients {
+  width: 40%;
+  padding-right: 7%;
+}
+
+/* MEDIA QUERY FOR INGREDIENT DIV */
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  #modal .recipe .content .ingredients {
+    width: 90%;
+    padding: 0;
+    
+  }
+}
+
+/* INSTRUCTIONS DIV */
+#modal .recipe .content .instructions {
+  width: 50%;  
+}
+
+/* MEDIA QUERY FOR INSTRUCTION DIV */
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  #modal .recipe .content .instructions {
+    width: 90%;
+    padding: 0;
+    
+  }
+}
+
+/* CART DIV */
+#modal .cart {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #320D07;
+  padding: 20px;
+  border: 10px solid white;
+  width: 70%;
+  height: 80%;
+  overflow: auto;
+  align-items: center;
+  /* PAYMENT METHOD FORM */
+}
+
+/* ANIMATE CLASS FOR CART */
+#modal .cart.animate {
+  animation: revealUpOnce 1s ease;
+}
+
+/* CART HEADING */
+#modal .cart h1 {
+  width: 100%;
+  font-family: "Cedarville Cursive", cursive;
+  color: #D6AE92;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 20px 0;
+}
+
+/* MEDIA QUERIES FOR CART HEADING */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart h1 {
+    font-size: 30px;
+    line-height: 30px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .cart h1 {
+    font-size: 20px;
+    line-height: 20px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .cart h1 {
+    font-size: 15px;
+    line-height: 15px;
+    
+  }
+}
+
+/* CART TABLE */
+#modal .cart table {
+  width: 90%;
+  font-weight: 100;
+  border-collapse: collapse;
+}
+
+/* MEDIA QUERY FOR TABLE */
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #modal .cart table {
+    width: 100%;
+    
+  }
+}
+
+/* CART TABLE ROW */
+#modal .cart tr {
+  margin: 10px 0;
+  border-bottom: 2px solid white;
+}
+
+/* MEDIA QUERY FOR CART TABLE ROW */
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #modal .cart tr {
+    border-bottom: 1px solid white;
+    
+  }
+}
+
+/* TABLE DATA AND TABLE HEADING */
+#modal .cart td, #modal .cart th {
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* MEDIA QUERIES FOR TABLE DATA AND TABLE HEADING */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart td, #modal .cart th {
+    font-size: 14px;
+    line-height: 24px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .cart td, #modal .cart th {
+    font-size: 12px;
+    line-height: 22px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .cart td, #modal .cart th {
+    font-size: 10px;
+    line-height: 20px;
+    
+  }
+}
+
+/* ITEM IMAGE */
+#modal .cart td img, #modal .cart th img {
+  max-width: 35%;
+}
+
+/* REMOVE FORM */
+#modal .cart td form, #modal .cart th form {
+  width: 45%;
+}
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #modal .cart td form, #modal .cart th form {
+    width: 60%;
+    
+  }
+}
+
+/* REMOVE BUTTON */
+#modal .cart td button, #modal .cart th button {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* REMOVE DIV */
+#modal .cart td .remove, #modal .cart th .remove {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  background: url("../assets/remove.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* REMOVE HOVER */
+#modal .cart td .remove:hover, #modal .cart th .remove:hover {
+  background: url("../assets/remove_hover.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* TABLE HEADING */
+#modal .cart th {
+  border: 2px solid white;
+}
+
+/* MEDIA QUERY FOR TABLE HEADING */
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #modal .cart th {
+    border: 1px solid white;
+    
+  }
+}
+
+/* EMPTY CART DIV */
+#modal .cart .empty_cart {
+  width: 80%;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* EMPTY CART HEADING */
+#modal .cart .empty_cart h1 {
+  width: 100%;
+  font-family: "Cedarville Cursive", cursive;
+  color: #D6AE92;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 50px 0 20px 0;
+}
+
+/* MEDIA QUERIES FOR EMPTY CART HEADING */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart .empty_cart h1 {
+    font-size: 30px;
+    line-height: 35px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .cart .empty_cart h1 {
+    font-size: 25px;
+    line-height: 30px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .cart .empty_cart h1 {
+    font-size: 20px;
+    line-height: 25px;
+    
+  }
+}
+
+/* SAD ROBOT IMAGE */
+#modal .cart .empty_cart img {
+  width: 30%;
+}
+
+/* SORRY MESSAGE */
+#modal .cart .empty_cart p {
+  font-size: 14px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+/* MEDIA QUERIES FOR SORRY MESSAGE */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart .empty_cart p {
+    font-size: 12px;
+    line-height: 22px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .cart .empty_cart p {
+    font-size: 11px;
+    line-height: 21px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .cart .empty_cart p {
+    font-size: 9px;
+    line-height: 19px;
+    
+  }
+}
+
+/* MENU LINK */
+#modal .cart .empty_cart p a {
+  color: #D6AE92;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* MENU LINK HOVER */
+#modal .cart .empty_cart p a:hover {
+  color: #E9C0A3;
+}
+
+/* BUTTON AND SUBMIT INPUT TYPES */
+#modal .cart input[type=button], #modal .cart input[type=submit] {
+  margin-top: 30px;
+  padding: 10px 30px;
+  border: none;
+  outline: 0;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #D6AE92;
+  color: #320D07;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES FOR BUTTON AND SUBMIT INPUT TYPE */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart input[type=button], #modal .cart input[type=submit] {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 25px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .cart input[type=button], #modal .cart input[type=submit] {
+    font-size: 12px;
+    line-height: 22px;
+    padding: 5px 20px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .cart input[type=button], #modal .cart input[type=submit] {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 5px 20px;
+    
+  }
+}
+
+/* BUTTON ENABLED HOVER AND FOCUS */
+#modal .cart input[type=button]:enabled:hover, #modal .cart input[type=button]:enabled:focus, #modal .cart input[type=submit]:enabled:hover, #modal .cart input[type=submit]:enabled:focus {
+  box-shadow: 0 0 8px #D6AE92;
+}
+
+/* BUTTON DISABLED */
+#modal .cart input[type=button]:disabled, #modal .cart input[type=submit]:disabled {
+  background-color: #604431;
+  cursor: not-allowed;
+}
+
+/* CONTACT DETAILS FORM */
+#modal .cart #contact_details_form {
+  width: 90%;
+  color: black;
+  flex-direction: column;
+  margin-top: 60px;
+  animation: revealUpOnce 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FORM ROW DIV */
+#modal .cart #contact_details_form .form_row {
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* MEDIA QUERY FOR FORM ROW DIV */
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #modal .cart #contact_details_form .form_row {
+    margin: 0;
+    
+  }
+}
+
+/* INPUT, SELECT, OPTION, AND OPTION CHECKED */
+#modal .cart #contact_details_form .form_row input, #modal .cart #contact_details_form .form_row select, #modal .cart #contact_details_form .form_row option, #modal .cart #contact_details_form .form_row option:checked {
+  color: black;
+  font-size: 17px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border: 3px solid transparent;
+  border-radius: 15px;
+}
+
+/* MEDIA QUERIES FOR INPUT, SELECT, OPTION, AND OPTION CHECKED */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart #contact_details_form .form_row input, #modal .cart #contact_details_form .form_row select, #modal .cart #contact_details_form .form_row option, #modal .cart #contact_details_form .form_row option:checked {
+    font-size: 14px;
+    padding: 8px 18px;
+    
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 750px) {
+  #modal .cart #contact_details_form .form_row input, #modal .cart #contact_details_form .form_row select, #modal .cart #contact_details_form .form_row option, #modal .cart #contact_details_form .form_row option:checked {
+    font-size: 12px;
+    padding: 6px 16px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #modal .cart #contact_details_form .form_row input, #modal .cart #contact_details_form .form_row select, #modal .cart #contact_details_form .form_row option, #modal .cart #contact_details_form .form_row option:checked {
+    font-size: 10px;
+    padding: 5px 15px;
+    
+  }
+}
+
+/* OPTION DISABLED */
+#modal .cart #contact_details_form .form_row option:disabled {
+  display: none;
+}
+
+/* TEXT AND EMAIL INPUT */
+#modal .cart #contact_details_form .form_row input[type=text], #modal .cart #contact_details_form .form_row input[type=email] {
+  width: 32%;
+}
+
+/* MEDIA QUERY FOR TEXT AND EMAIL INPUT */
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #modal .cart #contact_details_form .form_row input[type=text], #modal .cart #contact_details_form .form_row input[type=email] {
+    margin: 10px 0;
+    width: 100%;
+    
+  }
+}
+
+/* TEXT, EMAIL, AND SELECT INPUT FOCUS */
+#modal .cart #contact_details_form .form_row input[type=text]:focus, #modal .cart #contact_details_form .form_row input[type=email]:focus, #modal .cart #contact_details_form .form_row select:focus {
+  outline: none;
+  border: 3px solid #604431;
+}
+
+/* TEXT AND EMAIL PLACEHOLDER */
+#modal .cart #contact_details_form .form_row input[type=text]::-moz-placeholder, #modal .cart #contact_details_form .form_row input[type=email]::-moz-placeholder {
+  color: black;
+}
+
+/* APARTMENT, STREET, AREA, AND SELECT WRAPPER DIV */
+#modal .cart #contact_details_form .form_row input[type=text]::placeholder, #modal .cart #contact_details_form .form_row input[type=email]::placeholder {
+  color: black;
+}
+
+/* SELECT WRAPPER DIV */
+#modal .cart #contact_details_form .form_row input[name=apartment], #modal .cart #contact_details_form .form_row input[name=street], #modal .cart #contact_details_form .form_row input[name=area], #modal .cart #contact_details_form .form_row .select_wrapper {
+  width: 48%;
+}
+
+/* MEDIA QUERY FOR APARTMENT, STREET, AREA, AND SELECT WRAPPER DIV */
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  #modal .cart #contact_details_form .form_row input[name=apartment], #modal .cart #contact_details_form .form_row input[name=street], #modal .cart #contact_details_form .form_row input[name=area], #modal .cart #contact_details_form .form_row .select_wrapper {
+    width: 100%;
+    margin: 10px 0;
+    
+  }
+}
+
+/* SELECT */
+#modal .cart #contact_details_form .form_row .select_wrapper select {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* RECAP ORDER DIV */
+#modal .cart .recap_order {
+  display: flex;
+  width: 90%;
+  min-height: 500px;
+  max-height: 750px;
+  overflow: auto;
+  margin-top: 30px;
+  border: 5px solid white;
+  animation: revealUpOnce 1s ease;
+}
+
+/* MEDIA QUERIES FOR RECAP ORDER DIV */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart .recap_order {
+    min-height: 400px;
+    max-height: 650px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .cart .recap_order {
+    width: 100%;
+    min-height: 350px;
+    max-height: 600px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .cart .recap_order {
+    width: 100%;
+    min-height: 300px;
+    max-height: 550px;
+    
+  }
+}
+
+/* RECAP CART DIV */
+#modal .cart .recap_order #recap_cart {
+  width: 100%;
+}
+
+/* PAYMENT METHOD FORM DIV */
+#modal .cart #payment_method_form {
+  display: block;
+  width: 90%;
+  flex-direction: column;
+  animation: revealUpOnce 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PAYMENT CHOICES DIV */
+#modal .cart #payment_method_form .payment_choices {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* RADIO INPUT TYPE */
+#modal .cart #payment_method_form .payment_choices input[type=radio] {
+  display: none;
+}
+
+/* LABEL FOR CHOICES */
+#modal .cart #payment_method_form .payment_choices label {
+  width: 45%;
+  background-color: #604431;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-top: 40px;
+  padding: 40px 0;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES FOR LABEL */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart #payment_method_form .payment_choices label {
+    padding: 30px 0;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .cart #payment_method_form .payment_choices label {
+    padding: 20px 0;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .cart #payment_method_form .payment_choices label {
+    padding: 10px 0;
+    
+  }
+}
+
+/* PAYMENT CHOICE IMAGE */
+#modal .cart #payment_method_form .payment_choices label img {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+/* PAYMENT TEXT */
+#modal .cart #payment_method_form .payment_choices label p {
+  width: 80%;
+  color: #320D07;
+  font-size: 20px;
+}
+
+/* MEDIA QUERIES FOR PAYMENT TEXT */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .cart #payment_method_form .payment_choices label p {
+    font-size: 17px;
+    line-height: 27px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .cart #payment_method_form .payment_choices label p {
+    font-size: 14px;
+    line-height: 24px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .cart #payment_method_form .payment_choices label p {
+    font-size: 11px;
+    line-height: 21px;
+    
+  }
+}
+
+/* LABEL HOVER AND ON CHECK OF PAYMENT CHOICE */
+#modal .cart #payment_method_form .payment_choices label:hover, #modal .cart #payment_method_form .payment_choices input[type=radio]:checked + label {
+  background-color: #D6AE92;
+}
+
+/* THANK YOU FEEDBACK DIV */
+#modal .thank_you_feedback {
+  position: relative;
+  flex-direction: column;
+  background-color: #320D07;
+  padding: 20px;
+  border: 10px solid white;
+  width: 70%;
+  height: 80%;
+  overflow: auto;
+  animation: revealUpOnce 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* THANK YOU HEADING */
+#modal .thank_you_feedback .thank_you h4 {
+  width: 60%;
+  color: #D6AE92;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 100;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 20px 0 10px 0;
+}
+
+/* MEDIA QUERIES FOR THANK YOU HEADING */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .thank_you_feedback .thank_you h4 {
+    width: 70%;
+    font-size: 40px;
+    line-height: 40px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .thank_you_feedback .thank_you h4 {
+    width: 75%;
+    font-size: 30px;
+    line-height: 30px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .thank_you_feedback .thank_you h4 {
+    width: 85%;
+    font-size: 25px;
+    line-height: 25px;
+    
+  }
+}
+
+/* THANK YOU DIV */
+#modal .thank_you {
+  width: 90%;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* THANK YOU MESSAGE */
+#modal .thank_you h4 {
+  width: 40%;
+  color: #D6AE92;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 100;
+  font-size: 30px;
+  line-height: 30px;
+  margin: 20px 0 10px 0;
+}
+
+/* MEDIA QUERIES FOR THANK YOU MESSAGE */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .thank_you h4 {
+    width: 60%;
+    font-size: 27px;
+    line-height: 27px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .thank_you h4 {
+    width: 80%;
+    font-size: 24px;
+    line-height: 24px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .thank_you h4 {
+    width: 90%;
+    font-size: 21px;
+    line-height: 21px;
+    
+  }
+}
+
+/* HAPPY ROBOT IMAGE */
+#modal .thank_you img {
+  width: 30%;
+}
+
+/* MEDIA QUERIES FOR HAPPY ROBOT IMAGE */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .thank_you img {
+    width: 40%;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .thank_you img {
+    width: 50%;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .thank_you img {
+    width: 60%;
+    
+  }
+}
+
+/* ORDER RECEIVED MESSAGE */
+#modal .thank_you p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* MEDIA QUERIES FOR ORDER RECEIVED MESSAGE */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .thank_you p {
+    font-size: 17px;
+    line-height: 27px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .thank_you p {
+    font-size: 14px;
+    line-height: 24px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .thank_you p {
+    font-size: 11px;
+    line-height: 21px;
+    
+  }
+}
+
+/* ORDER FINISH BUTTONS */
+#modal .buttons {
+  width: 80%;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* BACK BUTTON */
+#modal .back {
+  position: fixed;
+  width: 5%;
+  height: 30px;
+  top: 25px;
+  left: 45px;
+  cursor: pointer;
+  background: url("../assets/back.png") no-repeat center center;
+  background-size: contain;
+  
+}
+
+/* BACK BUTTON HOVER */
+#modal .back:hover {
+  background: url("../assets/back_hover.png") no-repeat center center;
+}
+
+/* CLOSE BUTTON HOVER */
+#modal .close {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES FOR CLOSE BUTTON HOVER */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #modal .close {
+    font-size: 40px;
+    top: 13px;
+    right: 13px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #modal .close {
+    font-size: 30px;
+    top: 10px;
+    right: 10px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #modal .close {
+    font-size: 20px;
+    top: 5px;
+    right: 5px;
+    
+  }
+}
+
+/* CLOSE BUTTON FOCUS AND HOVER */
+#modal .close:focus, #modal .close:hover {
+  color: #D6AE92;
+}
+
+/* ADDED TO CART MODAL */
+#added_to_cart_modal {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: none;
+  align-items: center;
+}
+
+/* ADDED TO CART CONTENT */
+#added_to_cart_modal .content {
+  background-color: #320D07;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px black;
+  animation: revealUpOnce 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* MEDIA QUERIES FOR ADDED TO CART CONTENT */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #added_to_cart_modal .content {
+    padding: 0 30px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #added_to_cart_modal .content {
+    padding: 0 25px;
+    height: 75px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #added_to_cart_modal .content {
+    padding: 0 25px;
+    height: 70px;
+    
+  }
+}
+
+/* ADDED TO CART TEXT */
+#added_to_cart_modal .content h1 {
+  color: #D6AE92;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+/* MEDIA QUERIES FOR ADDED TO CART TEXT */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #added_to_cart_modal .content h1 {
+    font-size: 35px;
+    line-height: 35px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #added_to_cart_modal .content h1 {
+    font-size: 25px;
+    line-height: 25px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #added_to_cart_modal .content h1 {
+    font-size: 20px;
+    line-height: 20px;
+    
+  }
+}
+
+/* RIGHT DIV */
+#added_to_cart_modal .content .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* VIEW CART BUTTON */
+#added_to_cart_modal .content .right a {
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #D6AE92;
+  color: #320D07;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+/* MEDIA QUERIES FOR VIEW CART BUTTON */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #added_to_cart_modal .content .right a {
+    font-size: 17px;
+    line-height: 27px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #added_to_cart_modal .content .right a {
+    font-size: 14px;
+    line-height: 24px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #added_to_cart_modal .content .right a {
+    font-size: 11px;
+    line-height: 21px;
+    
+  }
+}
+
+/* VIEW CART BUTTON HOVER */
+#added_to_cart_modal .content .right a:hover {
+  box-shadow: 0 0 8px #D6AE92;
+}
+
+/* CLOSE BUTTON */
+#added_to_cart_modal .content .right .close {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES FOR CLOSE BUTTON */
+@media screen and (min-width: 751px) and (max-width: 950px) {
+  #added_to_cart_modal .content .right .close {
+    font-size: 40px;
+    top: 13px;
+    right: 13px;
+    
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  #added_to_cart_modal .content .right .close {
+    font-size: 30px;
+    top: 10px;
+    right: 10px;
+    
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #added_to_cart_modal .content .right .close {
+    font-size: 20px;
+    top: 5px;
+    right: 5px;
+    
+  }
+}
+
+/* CLOSE BUTTON FOCUS AND HOVER */
+#added_to_cart_modal .content .right .close:focus, #added_to_cart_modal .content .right .close:hover {
+  color: #D6AE92;
+}/*# sourceMappingURL=modal.css.map */

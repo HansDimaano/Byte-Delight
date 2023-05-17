@@ -1,0 +1,1032 @@
+/* SCSS for the modals */
+
+/* import functions.scss */
+@import 'functions.scss';
+
+/* MODAL DIV */
+#modal {
+    @include center_items();
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+
+    /* RECIPE DIV */
+    .recipe {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background-color: #320D07;
+        padding: 20px;
+        border: 10px solid white;
+        width: 70%;
+        height: 80%;
+        overflow: auto;
+        animation: revealUpOnce 1s ease;
+
+        /* HEADING DIV */
+        .heading {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+
+            /* RECIPE IMAGE ICON */
+            .recipe_img {
+                width: 20%;
+                object-fit: contain;
+                padding-right: 5%;
+
+                /* MEDIA QUERY FOR RECIPE IMAGE ICON */
+                @include media_query(0px, 750px){
+                    width: 30%;
+                }
+            }
+
+            /* RECIPE NAME DIV */
+            .recipe_name {
+                width: 50%;
+                padding-right: 5%;
+
+                /* MEDIA QUERY FOR RECIPE NAME DIV */
+                @include media_query(0px, 750px){
+                    width: 65%;
+                    padding: 0;
+                }
+
+                /* RECIPE HEADING */
+                h1 {
+                    font-family: 'Cedarville Cursive', cursive;
+                    color: #D6AE92;
+                    font-size: 40px;
+                    line-height: 40px;
+                    margin: 20px 0;
+
+                    /* MEDIA QUERIES FOR RECIPE HEADING */
+                    @include media_query(751px, 950px){
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
+        
+                    @include media_query(551px, 750px){
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+        
+                    @include media_query(0px, 550px){
+                        font-size: 15px;
+                        line-height: 15px;
+                    }
+                }
+
+                /* RECIPE DESCRIPTION */
+                p {
+                    font-size: 16px;
+                    line-height: 26px;
+
+                    /* MEDIA QUERIES FOR RECIPE DESCRIPTION */
+                    @include media_query(751px, 950px){
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+        
+                    @include media_query(551px, 750px){
+                        font-size: 12px;
+                        line-height: 22px;
+                    }
+        
+                    @include media_query(0px, 550px){
+                        font-size: 10px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            /* RATING DIV */
+            .rating {
+                width: 20%;
+                height: min-content;
+                text-align: center;
+
+                /* MEDIA QUERY FOR RATING DIV */
+                @include media_query(0px, 750px){
+                    width: 50%;
+                    margin: 20px 0 10px 0;
+                }
+                
+                /* BEGINNER FRIENDLY TEXT */
+                h4 {
+                    font-size: 17px;
+                    line-height: 27px;
+                    letter-spacing: 2px;
+                    margin: 10px 0;
+
+                    /* MEDIA QUERIES FOR BEGINNER FRIENDLY TEXT */
+                    @include media_query(751px, 950px){
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+        
+                    @include media_query(551px, 750px){
+                        font-size: 13px;
+                        line-height: 23px;
+                    }
+        
+                    @include media_query(0px, 550px){
+                        font-size: 11px;
+                        line-height: 21px;
+                    }
+                }                
+                
+                /* STAR DIV */
+                .star {
+                    width: 100%;
+
+                    /* MEDIA QUERY FOR STAR DIV */
+                    @include media_query(0px, 750px){
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        /* RECIPE CONTENT DIV */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+
+            /* INGREDIENTS AND INSTRUCTIONS HEADING */
+            h1 {
+                font-family: 'Cedarville Cursive', cursive;
+                color: #D6AE92;
+                font-size: 40px;
+                line-height: 40px;
+                margin: 20px 0;
+
+                /* MEDIA QUERIES FOR INGREDIENTS AND INSTRUCTIONS HEADING */
+                @include media_query(751px, 950px){
+                    font-size: 30px;
+                    line-height: 30px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 15px;
+                    line-height: 15px;
+                }
+            }
+
+            /* LISTS */
+            ul, ol {
+                margin: 20px 0 20px 30px;
+            }
+
+            /* PARAGRAPH AND LIST PARAGRAPH */
+            p, li {
+                line-height: 36px;
+
+                /* MEDIA QUEIRES FOR PARAGRAPH AND LIST PARAGRAPH */
+                @include media_query(751px, 950px){
+                    font-size: 14px;
+                    line-height: 34px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 12px;
+                    line-height: 32px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 10px;
+                    line-height: 30px;
+                }
+            }
+
+            /* INGREDIENTS DIV */
+            .ingredients {
+                width: 40%;
+                padding-right: 7%;
+
+                /* MEDIA QUERY FOR INGREDIENT DIV */
+                @include media_query(0px, 500px){
+                    width: 90%;
+                    padding: 0;
+                }
+            }
+
+            /* INSTRUCTIONS DIV */
+            .instructions {
+                width: 50%;
+
+                /* MEDIA QUERY FOR INSTRUCTION DIV */
+                @include media_query(0px, 500px){
+                    width: 90%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    /* CART DIV */
+    .cart {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background-color: #320D07;
+        padding: 20px;
+        border: 10px solid white;
+        width: 70%;
+        height: 80%;
+        overflow: auto;
+        align-items: center;
+
+        /* ANIMATE CLASS FOR CART */
+        &.animate{
+            animation: revealUpOnce 1s ease;
+        }
+        
+        /* CART HEADING */
+        h1 {
+            width: 100%;
+            font-family: 'Cedarville Cursive', cursive;
+            color: #D6AE92;
+            font-size: 40px;
+            line-height: 40px;
+            margin: 20px 0;
+
+            /* MEDIA QUERIES FOR CART HEADING */
+            @include media_query(751px, 950px){
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            @include media_query(551px, 750px){
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            @include media_query(0px, 550px){
+                font-size: 15px;
+                line-height: 15px;
+            }
+        }
+
+        /* CART TABLE */
+        table {
+            width: 90%;
+            font-weight: 100;
+            border-collapse: collapse;
+
+            /* MEDIA QUERY FOR TABLE */
+            @include media_query(0px, 650px){
+                width: 100%;
+            }
+        }
+
+        /* CART TABLE ROW */
+        tr {
+            margin: 10px 0;
+            border-bottom: 2px solid white;
+
+            /* MEDIA QUERY FOR CART TABLE ROW */
+            @include media_query(0px, 650px){
+                border-bottom: 1px solid white;
+            }
+        }
+
+        /* TABLE DATA AND TABLE HEADING */
+        td, th {
+            text-align: center;
+            padding: 30px 0;
+
+            /* MEDIA QUERIES FOR TABLE DATA AND TABLE HEADING */
+            @include media_query(751px, 950px){
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            @include media_query(551px, 750px){
+                font-size: 12px;
+                line-height: 22px;
+            }
+
+            @include media_query(0px, 550px){
+                font-size: 10px;
+                line-height: 20px;
+            }
+
+            /* ITEM IMAGE */
+            img {
+                max-width: 35%;
+            }
+
+            /* REMOVE FORM */
+            form {
+                width: 45%;
+    
+                @include media_query(0px, 650px){
+                    width: 60%;
+                }
+            }
+
+            /* REMOVE BUTTON */
+            button {
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+
+            /* REMOVE DIV */
+            .remove {
+                width: 100%;
+                height: 40px;
+                cursor: pointer;
+                background: url("../assets/remove.png") no-repeat center center;
+                background-size: contain;
+
+                /* REMOVE HOVER */
+                &:hover {
+                    background: url("../assets/remove_hover.png") no-repeat center center;
+                    background-size: contain;
+                }
+            }
+        }
+
+        /* TABLE HEADING */
+        th {
+            border: 2px solid white;
+
+            /* MEDIA QUERY FOR TABLE HEADING */
+            @include media_query(0px, 650px){
+                border: 1px solid white;
+            }
+        }
+
+        /* EMPTY CART DIV */
+        .empty_cart {
+            width: 80%;
+            flex-direction: column;
+            text-align: center;
+            @include center_items();
+
+            /* EMPTY CART HEADING */
+            h1 {
+                width: 100%;
+                font-family: 'Cedarville Cursive', cursive;
+                color: #D6AE92;
+                font-size: 40px;
+                line-height: 40px;
+                margin: 50px 0 20px 0;
+
+                /* MEDIA QUERIES FOR EMPTY CART HEADING */
+                @include media_query(751px, 950px){
+                    font-size: 30px;
+                    line-height: 35px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 25px;
+                    line-height: 30px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+            }
+
+            /* SAD ROBOT IMAGE */
+            img {
+                width: 30%;
+            }
+
+            /* SORRY MESSAGE */
+            p {
+                font-size: 14px;
+                margin-top: 20px;
+                letter-spacing: 1px;
+
+                /* MEDIA QUERIES FOR SORRY MESSAGE */
+                @include media_query(751px, 950px){
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 11px;
+                    line-height: 21px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 9px;
+                    line-height: 19px;
+                }
+
+                /* MENU LINK */
+                a {
+                    color: #D6AE92;
+                    text-decoration: underline;
+                    cursor: pointer;
+
+                    /* MENU LINK HOVER */
+                    &:hover {
+                        color: #E9C0A3;
+                    }
+                }
+            }
+        }
+
+        /* BUTTON AND SUBMIT INPUT TYPES */
+        input[type="button"], input[type="submit"]{
+            margin-top: 30px;
+            padding: 10px 30px;
+            border: none;
+            outline: 0;
+            font-size: 20px;
+            font-weight: 500;
+            background-color: #D6AE92;
+            color: #320D07;
+            border-radius: 10px;
+            cursor: pointer;
+
+            /* MEDIA QUERIES FOR BUTTON AND SUBMIT INPUT TYPE */
+            @include media_query(751px, 950px){
+                font-size: 14px;
+                line-height: 24px;
+                padding: 8px 25px;
+            }
+
+            @include media_query(551px, 750px){
+                font-size: 12px;
+                line-height: 22px;
+                padding: 5px 20px;
+            }
+
+            @include media_query(0px, 550px){
+                font-size: 10px;
+                line-height: 20px;
+                padding: 5px 20px;
+            }
+
+            /* BUTTON ENABLED HOVER AND FOCUS */
+            &:enabled:hover, &:enabled:focus {
+                box-shadow: 0 0 8px #D6AE92;
+            }
+
+            /* BUTTON DISABLED */
+            &:disabled {
+                background-color: #604431;
+                cursor: not-allowed;
+            }
+        }
+
+        /* CONTACT DETAILS FORM */
+        #contact_details_form {
+            width: 90%;
+            color: black;
+            flex-direction: column;
+            margin-top: 60px;
+            animation: revealUpOnce 1s ease;
+            @include center_items();
+
+            /* FORM ROW DIV */
+            .form_row {
+                width: 100%;
+                flex-wrap: wrap;
+                margin: 10px 0;
+                @include spaceBetween_items();
+    
+                /* MEDIA QUERY FOR FORM ROW DIV */
+                @include media_query(0px, 650px){
+                    margin: 0;
+                }
+
+                /* INPUT, SELECT, OPTION, AND OPTION CHECKED */
+                input, select, option, option:checked{
+                    color: black;
+                    font-size: 17px;
+                    padding: 10px 20px;
+                    border: none;
+                    outline: none;
+                    border: 3px solid transparent;
+                    border-radius: 15px;
+
+                    /* MEDIA QUERIES FOR INPUT, SELECT, OPTION, AND OPTION CHECKED */
+                    @include media_query(751px, 950px){
+                        font-size: 14px;
+                        padding: 8px 18px;
+                    }
+        
+                    @include media_query(651px, 750px){
+                        font-size: 12px;
+                        padding: 6px 16px;
+                    }
+        
+                    @include media_query(0px, 650px){
+                        font-size: 10px;
+                        padding: 5px 15px;
+                    }
+                }
+
+                /* OPTION DISABLED */
+                option:disabled{
+                    display: none;
+                }
+
+                /* TEXT AND EMAIL INPUT */
+                input[type=text], input[type=email]{
+                    width: 32%;
+        
+                    /* MEDIA QUERY FOR TEXT AND EMAIL INPUT */
+                    @include media_query(0px, 650px){
+                        margin: 10px 0;
+                        width: 100%;
+                    }
+                }
+
+                /* TEXT, EMAIL, AND SELECT INPUT FOCUS */
+                input[type=text]:focus, input[type=email]:focus, select:focus {
+                    outline: none;
+                    border: 3px solid #604431;
+                }
+                
+                /* TEXT AND EMAIL PLACEHOLDER */
+                input[type=text]::placeholder, input[type=email]::placeholder {
+                    color: black;
+                }
+
+                /* APARTMENT, STREET, AREA, AND SELECT WRAPPER DIV */
+                input[name=apartment], input[name=street], input[name=area], .select_wrapper{
+                    width: 48%;
+        
+                    /* MEDIA QUERY FOR APARTMENT, STREET, AREA, AND SELECT WRAPPER DIV */
+                    @include media_query(0px, 650px){
+                        width: 100%;
+                        margin: 10px 0;
+                    }
+                }
+
+                /* SELECT WRAPPER DIV */
+                .select_wrapper {
+
+                    /* SELECT */
+                    select {
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        /* RECAP ORDER DIV */
+        .recap_order {
+            display: flex;
+            width: 90%;
+            min-height: 500px;
+            max-height: 750px;
+            overflow: auto;
+            margin-top: 30px;
+            border: 5px solid white;
+            animation: revealUpOnce 1s ease;
+
+            /* MEDIA QUERIES FOR RECAP ORDER DIV */
+            @include media_query(751px, 950px){
+                min-height: 400px;
+                max-height: 650px;
+            }
+
+            @include media_query(551px, 750px){
+                width: 100%;
+                min-height: 350px;
+                max-height: 600px;
+            }
+
+            @include media_query(0px, 550px){
+                width: 100%;
+                min-height: 300px;
+                max-height: 550px;
+            }
+
+            /* RECAP CART DIV */
+            #recap_cart {
+                width: 100%;
+            }
+        }
+        
+        /* PAYMENT METHOD FORM */
+        #payment_method_form {
+            display: block;
+            width: 90%;
+            flex-direction: column;
+            animation: revealUpOnce 1s ease;
+            @include center_items();
+
+            /* PAYMENT CHOICES DIV */
+            .payment_choices {
+                width: 100%;
+                @include spaceAround_items();
+
+            /* RADIO INPUT TYPE */
+            input[type=radio]{
+                display: none;
+            }
+
+            /* LABEL FOR CHOICES */
+            label {
+                width: 45%;
+                background-color: #604431;
+                flex-direction: column;
+                border-radius: 20px;
+                margin-top: 40px;
+                padding: 40px 0;
+                text-align: center;
+                cursor: pointer;
+                @include center_items();
+
+                /* MEDIA QUERIES FOR LABEL */
+                @include media_query(751px, 950px){
+                    padding: 30px 0;
+                }
+    
+                @include media_query(551px, 750px){
+                    padding: 20px 0;
+                }
+    
+                @include media_query(0px, 550px){
+                    padding: 10px 0;
+                }
+
+                /* PAYMENT CHOICE IMAGE */
+                img {
+                    width: 50%;
+                    margin-bottom: 30px;
+                }
+
+                /* PAYMENT TEXT */
+                p {
+                    width: 80%;
+                    color: #320D07;
+                    font-size: 20px;
+
+                    /* MEDIA QUERIES FOR PAYMENT TEXT */
+                    @include media_query(751px, 950px){
+                        font-size: 17px;
+                        line-height: 27px;
+                    }
+        
+                    @include media_query(551px, 750px){
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+        
+                    @include media_query(0px, 550px){
+                        font-size: 11px;
+                        line-height: 21px;
+                    }
+                }
+            }
+
+            /* LABEL HOVER AND ON CHECK OF PAYMENT CHOICE */
+            label:hover, input[type=radio]:checked + label{
+                background-color: #D6AE92;
+            }
+            }
+            
+        }
+    }
+
+    /* THANK YOU FEEDBACK DIV */
+    .thank_you_feedback {
+        position: relative;
+        flex-direction: column;
+        background-color: #320D07;
+        padding: 20px;
+        border: 10px solid white;
+        width: 70%;
+        height: 80%;
+        overflow: auto;
+        animation: revealUpOnce 1s ease;
+        @include center_items();
+
+        /* THANK YOU HEADING */
+        .thank_you h4 {
+            width: 60%;
+            color: #D6AE92;
+            font-family: 'Cedarville Cursive', cursive;
+            font-weight: 100;
+            font-size: 50px;
+            line-height: 50px;
+            margin: 20px 0 10px 0;
+
+            /* MEDIA QUERIES FOR THANK YOU HEADING */
+            @include media_query(751px, 950px){
+                width: 70%;
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            @include media_query(551px, 750px){
+                width: 75%;
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            @include media_query(0px, 550px){
+                width: 85%;
+                font-size: 25px;
+                line-height: 25px;
+            }
+        }
+    }
+
+    /* THANK YOU DIV */
+    .thank_you {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        @include center_items();
+
+        /* THANK YOU MESSAGE */
+        h4 {
+            width: 40%;
+            color: #D6AE92;
+            font-family: 'Cedarville Cursive', cursive;
+            font-weight: 100;
+            font-size: 30px;
+            line-height: 30px;
+            margin: 20px 0 10px 0;
+
+            /* MEDIA QUERIES FOR THANK YOU MESSAGE */
+            @include media_query(751px, 950px){
+                width: 60%;
+                font-size: 27px;
+                line-height: 27px;
+            }
+
+            @include media_query(551px, 750px){
+                width: 80%;
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            @include media_query(0px, 550px){
+                width: 90%;
+                font-size: 21px;
+                line-height: 21px;
+            }
+        }
+
+        /* HAPPY ROBOT IMAGE */
+        img {
+            width: 30%;
+
+            /* MEDIA QUERIES FOR HAPPY ROBOT IMAGE */
+            @include media_query(751px, 950px){
+                width: 40%;
+            }
+
+            @include media_query(551px, 750px){
+                width: 50%;
+            }
+
+            @include media_query(0px, 550px){
+                width: 60%;
+            }
+        }
+
+        /* ORDER RECEIVED MESSAGE */
+        p {
+            font-size: 20px;
+            line-height: 30px;
+
+            /* MEDIA QUERIES FOR ORDER RECEIVED MESSAGE */
+            @include media_query(751px, 950px){
+                font-size: 17px;
+                line-height: 27px;
+            }
+
+            @include media_query(551px, 750px){
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            @include media_query(0px, 550px){
+                font-size: 11px;
+                line-height: 21px;
+            }
+        }
+    }
+
+    /* ORDER FINISH BUTTONS */
+    .buttons {
+        width: 80%;
+        margin: 20px 0;
+        flex-wrap: wrap;
+        @include spaceAround_items;
+    }
+
+    /* BACK BUTTON */
+    .back {
+        position: fixed;
+        width: 5%;
+        height: 30px;
+        top: 25px;
+        left: 45px;
+        cursor: pointer;
+        background: url("../assets/back.png") no-repeat center center;
+        background-size: contain;
+
+        /* BACK BUTTON HOVER */
+        &:hover {
+            background: url("../assets/back_hover.png") no-repeat center center;
+        }
+    }
+
+    /* CLOSE BUTTON HOVER */
+    .close {
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        top: 15px;
+        right: 15px;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        @include center_items();
+
+        /* MEDIA QUERIES FOR CLOSE BUTTON HOVER */
+        @include media_query(751px, 950px){
+            font-size: 40px;
+            top: 13px;
+            right: 13px;
+        }
+
+        @include media_query(551px, 750px){
+            font-size: 30px;
+            top: 10px;
+            right: 10px;
+        }
+
+        @include media_query(0px, 550px){
+            font-size: 20px;
+            top: 5px;
+            right: 5px;
+        }
+
+        /* CLOSE BUTTON FOCUS AND HOVER */
+        &:focus, &:hover{
+            color: #D6AE92;
+        }
+    }
+}
+
+/* ADDED TO CART MODAL */
+#added_to_cart_modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: none;
+    align-items: center;
+
+    /* ADDED TO CART CONTENT */
+    .content {
+        background-color: #320D07;
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        width: 90%;
+        height: 100px;
+        margin: 0 auto;
+        padding: 0 40px;
+        border-radius: 30px;
+        box-shadow: 0 0 20px black;
+        animation: revealUpOnce 1s ease;
+        @include spaceBetween_items();
+
+        /* MEDIA QUERIES FOR ADDED TO CART CONTENT */
+        @include media_query(751px, 950px){
+            padding: 0 30px;
+        }
+
+        @include media_query(551px, 750px){
+            padding: 0 25px;
+            height: 75px;
+        }
+
+        @include media_query(0px, 550px){
+            padding: 0 25px;
+            height: 70px;
+        }
+
+        /* ADDED TO CART TEXT */
+        h1 {
+            color: #D6AE92;
+            font-size: 40px;
+            line-height: 40px;
+
+            /* MEDIA QUERIES FOR ADDED TO CART TEXT */
+            @include media_query(751px, 950px){
+                font-size: 35px;
+                line-height: 35px;
+            }
+
+            @include media_query(551px, 750px){
+                font-size: 25px;
+                line-height: 25px;
+            }
+
+            @include media_query(0px, 550px){
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+
+        /* RIGHT DIV */
+        .right {
+            @include center_items();
+
+            /* VIEW CART BUTTON */
+            a {
+                padding: 10px 30px;
+                font-size: 20px;
+                font-weight: 500;
+                background-color: #D6AE92;
+                color: #320D07;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-right: 30px;
+
+                /* MEDIA QUERIES FOR VIEW CART BUTTON */
+                @include media_query(751px, 950px){
+                    font-size: 17px;
+                    line-height: 27px;
+                }
+    
+                @include media_query(551px, 750px){
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+    
+                @include media_query(0px, 550px){
+                    font-size: 11px;
+                    line-height: 21px;
+                }
+    
+                /* VIEW CART BUTTON HOVER */
+                &:hover {
+                    box-shadow: 0 0 8px #D6AE92;
+                }
+            }
+
+            /* CLOSE BUTTON */
+            .close {
+                color: white;
+                font-size: 50px;
+                font-weight: bold;
+                cursor: pointer;
+                @include center_items();
+        
+                /* MEDIA QUERIES FOR CLOSE BUTTON */
+                @include media_query(751px, 950px){
+                    font-size: 40px;
+                    top: 13px;
+                    right: 13px;
+                }
+        
+                @include media_query(551px, 750px){
+                    font-size: 30px;
+                    top: 10px;
+                    right: 10px;
+                }
+        
+                @include media_query(0px, 550px){
+                    font-size: 20px;
+                    top: 5px;
+                    right: 5px;
+                }
+        
+                /* CLOSE BUTTON FOCUS AND HOVER */
+                &:focus, &:hover{
+                    color: #D6AE92;
+                }
+            }
+        }
+    }
+}

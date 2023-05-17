@@ -1,0 +1,391 @@
+/* SCSS for the header */
+/* import functions.scss */
+/* SCSS for holding the imports, mixins, and keyframes */
+/* import PT Serif Caption and Cedarville Cursive fonts */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+/* mixin for creating media query screens */
+/* mixin for centering the items in HTML */
+/* mixin for space around in justifying content and aligning items to center in HTML */
+/* mixin for space around in justifying content and aligning items to center in HTML */
+/* animation for revealing elements up once */
+@keyframes revealUpOnce {
+  /* set opacity to 0 and transform to down */
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  /* set opacity to 1 and transform to 0 */
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* animation for revealing elements right once */
+@keyframes revealRightOnce {
+  /* set opacity to 0 and transform to left */
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  /* set opacity to 1 and transform to 0 */
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* animation for volume animation reveal */
+@keyframes volumeAnim {
+  /* set width to 0 */
+  from {
+    width: 0;
+  }
+  /* set width to inherit */
+  to {
+    width: inherit;
+  }
+}
+/* FOOTER */
+footer {
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* SET DISPLAY TO NONE INITIALLY (will be changed in toggle_footer.js) */
+  display: none;
+  /* CONTACT US DIV */
+  /* COPYRIGHT DIV */
+}
+footer .contact_us {
+  background-color: #A4866E;
+  width: 100%;
+  display: flex;
+  /* MEDIA QUERY FOR CONTACT US DIV */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* FORM DIV */
+  /* SOCIAL MEDIA DIV */
+}
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  footer .contact_us {
+    flex-direction: column;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .form_div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  padding: 40px;
+  /* MEDIA QUERY FOR FORM DIV */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* QUESTION DIV */
+  /* FORM */
+}
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  footer .contact_us .form_div {
+    width: 100%;
+    padding: 40px 0;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .form_div .question {
+  width: 80%;
+  /* QUESTION PARAGRAPH */
+}
+footer .contact_us .form_div .question p {
+  color: #281512;
+  font-size: 20px;
+  /* QUESTION CURSIVE PARAGRAPH */
+  /* MEDIA QUERY FOR QUESTION PARAGRAPH */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+}
+footer .contact_us .form_div .question p.cursive {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 25px;
+  line-height: 27px;
+  /* MEDIA QUERY FOR QUESTION CURSIVE PARAGRAPH */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .form_div .question p.cursive {
+    font-size: 21px;
+    line-height: 23px;
+    /* insert content inside media query */
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .form_div .question p {
+    font-size: 16px;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .form_div form {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  /* MEDIA QUERY FOR FORM */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* TEXT INPUT DIV */
+  /* TEXTAREA INPUT DIV */
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .form_div form {
+    flex-direction: column;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .form_div form .text_input {
+  width: 50%;
+  /* MEDIA QUERY FOR TEXT INPUT DIV */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* TEXT INPUT */
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .form_div form .text_input {
+    width: 100%;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .form_div form .text_input input[type=text] {
+  width: 90%;
+  float: left;
+  padding: 10px 5px;
+  background-color: #D9D9D9;
+  color: #1E1E1E;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  transition: 0.3s ease-in-out;
+  /* TEXT INPUT FOCUS AND HOVER */
+  /* MEDIA QUERIES FOR TEXT INPUT */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+}
+footer .contact_us .form_div form .text_input input[type=text]:focus, footer .contact_us .form_div form .text_input input[type=text]:hover {
+  border: 2px solid #281512;
+  box-shadow: 0 0 5px #281512;
+  outline: none;
+}
+@media screen and (min-width: 526px) and (max-width: 850px) {
+  footer .contact_us .form_div form .text_input input[type=text] {
+    width: 80%;
+    margin-left: 40px;
+    /* insert content inside media query */
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .form_div form .text_input input[type=text] {
+    font-size: 13px;
+    width: 80%;
+    float: none;
+    padding: 6px 4px;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .form_div form .textarea_input {
+  width: 50%;
+  /* MEDIA QUERY FOR TEXTAREA INPUT DIV */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* TEXTAREA INPUT */
+  /* SEND EMAIL BUTTON */
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .form_div form .textarea_input {
+    width: 100%;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .form_div form .textarea_input textarea {
+  width: 95%;
+  height: 100px;
+  float: right;
+  padding: 15px;
+  resize: none;
+  border: 2px solid transparent;
+  color: #1E1E1E;
+  border-radius: 5px;
+  background-color: #BEAFA3;
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+  /* TEXTAREA INPUT FOCUS AND HOVER */
+  /* MEDIA QUERIES FOR TEXTAREA INPUT */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+}
+footer .contact_us .form_div form .textarea_input textarea:focus, footer .contact_us .form_div form .textarea_input textarea:hover {
+  border: 2px solid #281512;
+  box-shadow: 0 0 5px #281512;
+  outline: none;
+}
+@media screen and (min-width: 526px) and (max-width: 850px) {
+  footer .contact_us .form_div form .textarea_input textarea {
+    width: 85%;
+    margin-right: 40px;
+    /* insert content inside media query */
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .form_div form .textarea_input textarea {
+    width: 80%;
+    height: 75px;
+    font-size: 13px;
+    padding: 6px 4px;
+    float: none;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .form_div form .textarea_input input[type=submit] {
+  min-width: 40%;
+  float: right;
+  padding: 10px 5px;
+  background-color: #D9D9D9;
+  color: #1E1E1E;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  /* SEND EMAIL BUTTON FOCUS AND HOVER */
+  /* MEDIA QUERIES FOR SEND EMAIL BUTTON */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+}
+footer .contact_us .form_div form .textarea_input input[type=submit]:focus, footer .contact_us .form_div form .textarea_input input[type=submit]:hover {
+  background-color: #281512;
+  color: #D9D9D9;
+  box-shadow: 0 0 5px #281512;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 526px) and (max-width: 850px) {
+  footer .contact_us .form_div form .textarea_input input[type=submit] {
+    margin-right: 40px;
+    /* insert content inside media query */
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .form_div form .textarea_input input[type=submit] {
+    float: none;
+    font-size: 13px;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .social {
+  width: 50%;
+  flex-direction: column;
+  padding: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* MEDIA QUERY FOR SOCIAL MEDIA DIV */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* SOCIAL MEDIA PARAGRAPH */
+  /* LOGOS DIV */
+}
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  footer .contact_us .social {
+    width: 100%;
+    padding: 0 0 40px 0;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .social p {
+  width: 80%;
+  color: #281512;
+  font-size: 20px;
+  margin: 5px 0;
+  /* MEDIA QUERY FOR SOCIAL MEDIA PARAGRAPH */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* SOCIAL MEDIA CURSIVE PARAGRAPH */
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .social p {
+    font-size: 16px;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .social p.cursive {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 25px;
+  line-height: 27px;
+  /* MEDIA QUERY FOR SOCIAL MEDIA CURSIVE PARAGRAPH */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .contact_us .social p.cursive {
+    font-size: 21px;
+    line-height: 23px;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .social .logos {
+  width: 100%;
+  /* set display to flex to make use of align items and justify content */
+  display: flex;
+  /* use align items to center the items and justify content to space around the items */
+  align-items: center;
+  justify-content: space-around;
+  /* MEDIA QUERY FOR LOGOS DIV */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* LOGO LINKS */
+}
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  footer .contact_us .social .logos {
+    width: 85%;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .social .logos a {
+  width: 12%;
+  border-radius: 50%;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  /* MEDIA QUERY FOR LOGO LINKS */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+  /* LOGO IMAGE */
+  /* LOGO IMAGE HOVER */
+}
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  footer .contact_us .social .logos a {
+    width: 10%;
+    /* insert content inside media query */
+  }
+}
+footer .contact_us .social .logos a img {
+  width: 100%;
+}
+footer .contact_us .social .logos a:hover {
+  width: 13%;
+}
+footer .copyright {
+  padding: 10px;
+  /* MEDIA QUERY FOR COPYRIGHT DIV */
+  /* require min-width and max-width */
+  /* pass on the values of minimum width and maximum width to the media query */
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  footer .copyright {
+    font-size: 12px;
+    /* insert content inside media query */
+  }
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,290 @@
+/* SCSS for the header */
+
+/* import functions.scss */
+@import 'functions.scss';
+
+/* FOOTER */
+footer {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    @include center_items();
+
+    /* SET DISPLAY TO NONE INITIALLY (will be changed in toggle_footer.js) */
+    display: none;
+
+    /* CONTACT US DIV */
+    .contact_us {
+        background-color: #A4866E;
+        width: 100%;
+        display: flex;
+
+        /* MEDIA QUERY FOR CONTACT US DIV */
+        @include media_query(0px, 850px){
+            flex-direction: column;
+        }
+        
+        /* FORM DIV */
+        .form_div {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            padding: 40px;
+
+            /* MEDIA QUERY FOR FORM DIV */
+            @include media_query(0px, 850px){
+                width: 100%;
+                padding: 40px 0;
+            }
+
+            /* QUESTION DIV */
+            .question{
+
+                width: 80%;
+
+                /* QUESTION PARAGRAPH */
+                p {
+                    color: #281512;
+                    font-size: 20px;
+    
+                    /* QUESTION CURSIVE PARAGRAPH */
+                    &.cursive {
+                        font-family: 'Cedarville Cursive', cursive;
+                        font-size: 25px;
+                        line-height: 27px;
+
+                        /* MEDIA QUERY FOR QUESTION CURSIVE PARAGRAPH */
+                        @include media_query(0px, 525px){
+                            font-size: 21px;
+                            line-height: 23px;
+                        }
+                    }
+
+                    /* MEDIA QUERY FOR QUESTION PARAGRAPH */
+                    @include media_query(0px, 525px){
+                        font-size: 16px;
+                    }
+                }
+            }
+            
+            /* FORM */
+            form {
+                width: 100%;
+                display: flex;
+                margin-top: 30px;
+
+                /* MEDIA QUERY FOR FORM */
+                @include media_query(0px, 525px){
+                    flex-direction: column;
+                }
+
+                /* TEXT INPUT DIV */
+                .text_input{
+
+                    width: 50%;
+
+                    /* MEDIA QUERY FOR TEXT INPUT DIV */
+                    @include media_query(0px, 525px){
+                        width: 100%;
+                    }
+
+                    /* TEXT INPUT */
+                    input[type=text] {
+                        width: 90%;
+                        float: left;
+                        padding: 10px 5px;
+                        background-color: #D9D9D9;
+                        color: #1E1E1E;
+                        border: 2px solid transparent;
+                        border-radius: 5px;
+                        margin-bottom: 30px;
+                        transition: 0.3s ease-in-out;
+
+                        /* TEXT INPUT FOCUS AND HOVER */
+                        &:focus, &:hover{
+                            border: 2px solid #281512;
+                            box-shadow: 0 0 5px #281512;
+                            outline: none;
+                        }
+
+                        /* MEDIA QUERIES FOR TEXT INPUT */
+                        @include media_query(526px, 850px){
+                            width: 80%;
+                            margin-left: 40px;
+                        }
+
+                        @include media_query(0px, 525px){
+                            font-size: 13px;
+                            width: 80%;
+                            float: none;
+                            padding: 6px 4px;
+                        }
+                    }
+                }
+
+                /* TEXTAREA INPUT DIV */
+                .textarea_input {
+                    width: 50%;
+
+                    /* MEDIA QUERY FOR TEXTAREA INPUT DIV */
+                    @include media_query(0px, 525px){
+                        width: 100%;
+                    }
+
+                    /* TEXTAREA INPUT */
+                    textarea {
+                        width: 95%;
+                        height: 100px;
+                        float: right;
+                        padding: 15px;
+                        resize: none;
+                        border: 2px solid transparent;
+                        color: #1E1E1E;
+                        border-radius: 5px;
+                        background-color:#BEAFA3;
+                        margin-bottom: 20px;
+                        transition: 0.3s ease-in-out;
+
+                        /* TEXTAREA INPUT FOCUS AND HOVER */
+                        &:focus, &:hover{
+                            border: 2px solid #281512;
+                            box-shadow: 0 0 5px #281512;
+                            outline: none;
+                        }
+
+                        /* MEDIA QUERIES FOR TEXTAREA INPUT */
+                        @include media_query(526px, 850px){
+                            width: 85%;
+                            margin-right: 40px;
+                        }
+
+                        @include media_query(0px, 525px){
+                            width: 80%;
+                            height: 75px;
+                            font-size: 13px;
+                            padding: 6px 4px;
+                            float: none;
+                        }
+                    }
+
+                    /* SEND EMAIL BUTTON */
+                    input[type=submit] {
+                        min-width: 40%;
+                        float: right;
+                        padding: 10px 5px;
+                        background-color: #D9D9D9;
+                        color: #1E1E1E;
+                        border: 2px solid transparent;
+                        border-radius: 5px;
+                        transition: 0.3s ease-in-out;
+
+                        /* SEND EMAIL BUTTON FOCUS AND HOVER */
+                        &:focus, &:hover{
+                            background-color: #281512;
+                            color:#D9D9D9;
+                            box-shadow: 0 0 5px #281512;
+                            outline: none;
+                            cursor: pointer;
+                        }
+
+                        /* MEDIA QUERIES FOR SEND EMAIL BUTTON */
+                        @include media_query(526px, 850px){
+                            margin-right: 40px;
+                        }
+
+                        @include media_query(0px, 525px){
+                            float: none;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* SOCIAL MEDIA DIV */
+        .social {
+            width: 50%;
+            flex-direction: column;
+            padding: 70px;
+            @include center_items();
+
+            /* MEDIA QUERY FOR SOCIAL MEDIA DIV */
+            @include media_query(0px, 850px){
+                width: 100%;
+                padding: 0 0 40px 0;
+            }
+
+            /* SOCIAL MEDIA PARAGRAPH */
+            p {
+                width: 80%;
+                color: #281512;
+                font-size: 20px;
+                margin: 5px 0;
+
+                /* MEDIA QUERY FOR SOCIAL MEDIA PARAGRAPH */
+                @include media_query(0px, 525px){
+                    font-size: 16px;
+                }
+
+                /* SOCIAL MEDIA CURSIVE PARAGRAPH */
+                &.cursive {
+                    font-family: 'Cedarville Cursive', cursive;
+                    font-size: 25px;
+                    line-height: 27px;
+
+                    /* MEDIA QUERY FOR SOCIAL MEDIA CURSIVE PARAGRAPH */
+                    @include media_query(0px, 525px){
+                        font-size: 21px;
+                        line-height: 23px;
+                    }
+                }
+            }
+
+            /* LOGOS DIV */
+            .logos {
+                width: 100%;
+                @include spaceAround_items();
+
+                /* MEDIA QUERY FOR LOGOS DIV */
+                @include media_query(0px, 850px){
+                    width: 85%;
+                }
+
+                /* LOGO LINKS */
+                a {
+                    width: 12%;
+                    border-radius: 50%;
+                    margin: 15px 0;
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+
+                    /* MEDIA QUERY FOR LOGO LINKS */
+                    @include media_query(0px, 850px){
+                        width: 10%;
+                    }
+
+                    /* LOGO IMAGE */
+                    img {
+                        width: 100%;
+                    }
+
+                    /* LOGO IMAGE HOVER */
+                    &:hover {
+                        width: 13%;
+                    }
+                }
+            }
+        }
+    }
+
+    /* COPYRIGHT DIV */
+    .copyright {
+        padding: 10px;
+
+        /* MEDIA QUERY FOR COPYRIGHT DIV */
+        @include media_query(0px, 525px){
+            font-size: 12px;
+        }
+    }
+}
