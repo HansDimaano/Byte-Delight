@@ -1,36 +1,5 @@
 ////-- JAVASCRIPT FOR REQUESTING HTML CONTENT USING XHTTP
 
-// Function for loading page (requires url, div_ID, link, and title)
-function loadPage(url, div_ID, link, title) {
-    const xhttp = new XMLHttpRequest(); // Create new XHTTP Request
-
-    // XHTTP onload function
-    xhttp.onload = function() {
-
-        // Pass on the response text of XHTTP to the chosen DIV
-        document.getElementById(div_ID).innerHTML = this.responseText;
-    }
-
-    // Open the URL using GET method
-    xhttp.open("GET", url);
-
-    // Send the XHTTP Request
-    xhttp.send();
-
-    // Get the current active navigation link 
-    var activeLink = document.getElementsByClassName("active");
-    
-    // Remove the active class to the current active navigation link
-    activeLink[0].classList.remove("active");
-
-    // Add the active class to the current link
-    link.classList.add("active");
-    
-    // Set the document title to the title passed on
-    document.title = title;
-}
-
-
 // Function for loading modals (Recipe and Thank you Modals)
 function loadModal(url, div_ID) {
     const xhttp = new XMLHttpRequest(); // Create new XHTTP Request
@@ -64,6 +33,8 @@ function loadCartModal(url, div_ID, animation_bool) {
         // Remove temporary script
         temporary_script.remove();
     });
+
+    const xhttp = new XMLHttpRequest(); // Create new XHTTP Request
 
     // XHTTP onload function
     xhttp.onload = function() {
