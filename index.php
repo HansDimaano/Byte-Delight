@@ -464,13 +464,13 @@
                 <div class="logos">
                     
                     <!-- Facebook -->
-                    <a><img src="assets/facebook.png"></a>
+                    <a href="https://www.facebook.com/Byte-Delight-102618046177297/" target="_blank"><img src="assets/facebook.png"></a>
 
                     <!-- Instagram -->
-                    <a><img src="assets/instagram.png"></a>
+                    <a href="https://instagram.com/bytedelight?igshid=MzRlODBiNWFlZA==" target="_blank"><img src="assets/instagram.png"></a>
 
                     <!-- Tiktok -->
-                    <a><img src="assets/tiktok.png"></a>
+                    <a href="https://www.tiktok.com/@bytedelight.co" target="_blank"><img src="assets/tiktok.png"></a>
                 </div>
 
                 <!-- Byte Delight Gmail -->
